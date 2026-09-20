@@ -94,12 +94,6 @@
         q: "¿Esta calculadora sustituye el seguimiento médico?",
         a: "No. Es una estimación orientativa basada en una fórmula estándar. El seguimiento real del embarazo (ecografías, análisis, controles) debe hacerlo siempre un profesional sanitario, que es quien puede confirmar la edad gestacional real y detectar cualquier incidencia."
       }
-    ],
-    legal: {
-      email: "hola@TU-DOMINIO-AQUI.com",
-      nombreLegal: "[Nombre y apellidos / razón social del titular]",
-      nif: "[NIF / CIF]",
-      direccion: "[Dirección postal completa]"
-    }
+    ]
   };
 })();
