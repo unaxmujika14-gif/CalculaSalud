@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calculadora de calorías diarias online gratis | CalculaSalud</title>
+<meta name="description" content="Calcula cuántas calorías necesitas al día según tu metabolismo basal y tu nivel de actividad física. Gratis, sin registro.">
+<link rel="canonical" href="https://unaxmujika14-gif.github.io/CalculaSalud/calorias-diarias.html">
+<!-- TODO DOMINIO: sustituye TU-DOMINIO-AQUI.com por tu dominio real antes de publicar (canonical, og:image, contacto). No se ha inventado un dominio real a propósito. -->
+<meta property="og:title" content="Calculadora de calorías diarias online gratis | CalculaSalud">
+<meta property="og:description" content="Tu metabolismo basal y tus calorías diarias según tu nivel de actividad.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/og-calorias.webp">
+<meta name="theme-color" content="#0f9488">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="google-adsense-account" content="ca-pub-2379537169533504">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2379537169533504" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@500;600;700;800&family=IBM+Plex+Mono:wght@600;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260920">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de calorías diarias — CalculaSalud",
+  "description": "Calcula el metabolismo basal (fórmula de Mifflin-St Jeor) y las calorías diarias totales según el nivel de actividad física.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any (navegador web)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Qué es el metabolismo basal (TMB)?", "acceptedAnswer": { "@type": "Answer", "text": "Es la cantidad de energía que tu cuerpo necesita en reposo absoluto para mantener funciones vitales. Esta calculadora lo estima con la fórmula de Mifflin-St Jeor, una de las más usadas y precisas para población general." } },
+    { "@type": "Question", "name": "¿Cómo se pasa del metabolismo basal a las calorías diarias totales?", "acceptedAnswer": { "@type": "Answer", "text": "Se multiplica el TMB por un factor según tu nivel de actividad física: sedentario, ligero, moderado, intenso o muy intenso." } },
+    { "@type": "Question", "name": "¿Sirve esta calculadora para perder o ganar peso?", "acceptedAnswer": { "@type": "Answer", "text": "Te da el punto de partida: las calorías que necesitas para mantener tu peso actual. A partir de ahí se suele ajustar un déficit o superávit calórico moderado, idealmente con ayuda de un profesional de la nutrición." } },
+    { "@type": "Question", "name": "¿Por qué la fórmula pide sexo, edad, peso y altura?", "acceptedAnswer": { "@type": "Answer", "text": "El metabolismo basal varía con la masa corporal, la edad y, de media, entre hombres y mujeres por diferencias en la composición corporal. La fórmula de Mifflin-St Jeor usa estas variables porque son las que mejor explican esa variación." } },
+    { "@type": "Question", "name": "¿Es exacta esta estimación?", "acceptedAnswer": { "@type": "Answer", "text": "Es una fórmula validada científicamente pero sigue siendo una estimación estadística. Tu metabolismo real puede variar por genética, composición corporal o condiciones médicas." } }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg></span>
+      CalculaSalud
+    </a>
+    <nav class="main-nav" data-nav aria-label="Herramientas"></nav>
+    <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel" aria-label="Abrir menú de herramientas">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="nav-scrim" id="nav-scrim"></div>
+  <nav class="mobile-nav-panel" id="mobile-nav-panel" data-nav aria-label="Herramientas (móvil)"></nav>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">CalculaSalud</a> / Calorías diarias</p>
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1-.5-2-1-2 .5 2-1 3-2 2 1-2-1-3-1-5-1 1-2 2-2 4-1-1-1-3 0-6Z"/></svg>
+        Herramienta de salud gratuita
+      </span>
+      <h1>Calcula cuántas calorías necesitas al día</h1>
+      <p class="subtitle">Introduce tu sexo, edad, peso, altura y nivel de actividad. Verás tu metabolismo basal y las calorías diarias que necesitas para mantener tu peso actual.</p>
+
+      <div class="trust-badges">
+        <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/></svg> 100% privado</span>
+        <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Resultado al instante</span>
+        <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 12h18"/></svg> Gratis, sin registro</span>
+      </div>
+
+      <nav class="tool-switcher" data-tool-switcher aria-label="Cambiar de calculadora"></nav>
+
+      <form class="tool-card" id="form-calorias" novalidate>
+        <div class="tool-card__head">
+          <span class="tool-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1-.5-2-1-2 .5 2-1 3-2 2 1-2-1-3-1-5-1 1-2 2-2 4-1-1-1-3 0-6Z"/></svg></span>
+          <div><h2>Calculadora de calorías diarias</h2><p>Rellena los 5 campos y pulsa calcular</p></div>
+        </div>
+
+        <div class="tool-grid">
+          <div class="field">
+            <label for="sexo-calorias">Sexo</label>
+            <div class="input-affix">
+              <select id="sexo-calorias" class="affix-select" style="flex:1; padding:.85rem .9rem; font-family:var(--sans); font-weight:700;">
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+              </select>
+            </div>
+            <span class="field-hint">El metabolismo basal difiere de media entre sexos.</span>
+          </div>
+          <div class="field">
+            <label for="edad-calorias"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Edad</label>
+            <div class="input-affix">
+              <input type="text" inputmode="decimal" id="edad-calorias" name="edad-calorias" value="30" required>
+              <span class="affix">años</span>
+            </div>
+            <span class="field-hint">Tu edad actual.</span>
+            <span class="field-error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="peso-calorias"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/></svg> Peso</label>
+            <div class="input-affix">
+              <input type="text" inputmode="decimal" id="peso-calorias" name="peso-calorias" value="70" required>
+              <span class="affix">kg</span>
+            </div>
+            <span class="field-hint">Tu peso actual.</span>
+            <span class="field-error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="altura-calorias"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/></svg> Altura</label>
+            <div class="input-affix">
+              <input type="text" inputmode="decimal" id="altura-calorias" name="altura-calorias" value="170" required>
+              <span class="affix">cm</span>
+            </div>
+            <span class="field-hint">Tu altura en centímetros.</span>
+            <span class="field-error" role="alert"></span>
+          </div>
+          <div class="field" style="grid-column: 1 / -1">
+            <label for="actividad-calorias">Nivel de actividad física</label>
+            <div class="input-affix">
+              <select id="actividad-calorias" class="affix-select" style="flex:1; padding:.85rem .9rem; font-family:var(--sans); font-weight:700;">
+                <option value="sedentario">Sedentario (poco o ningún ejercicio)</option>
+                <option value="ligero">Ligera (1-3 días/semana)</option>
+                <option value="moderado" selected>Moderada (3-5 días/semana)</option>
+                <option value="intenso">Intensa (6-7 días/semana)</option>
+                <option value="muy-intenso">Muy intensa (a diario + trabajo físico)</option>
+              </select>
+            </div>
+            <span class="field-hint">Elige el nivel que mejor describa tu semana habitual.</span>
+          </div>
+        </div>
+
+        <div class="tool-actions">
+          <button type="submit" class="btn btn-primary">
+            <span class="btn-spinner"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1-.5-2-1-2 .5 2-1 3-2 2 1-2-1-3-1-5-1 1-2 2-2 4-1-1-1-3 0-6Z"/></svg>
+            <span class="btn-label">Calcular calorías</span>
+          </button>
+          <button type="button" class="btn btn-ghost" id="reset-calorias">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+            Limpiar
+          </button>
+        </div>
+
+        <p class="error-msg" id="error-calorias" role="alert">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          <span></span>
+        </p>
+
+        <div class="result-zone" id="resultado-calorias" aria-live="polite">
+          <div class="result-hero">
+            <span class="result-hero__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1-.5-2-1-2 .5 2-1 3-2 2 1-2-1-3-1-5-1 1-2 2-2 4-1-1-1-3 0-6Z"/></svg></span>
+            <div>
+              <div class="result-hero__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg> Calorías diarias estimadas</div>
+              <div class="big" id="out-tdee">—<small>kcal/día</small></div>
+              <p class="field-hint" id="out-subtitle-calorias" style="margin-top:.3rem"></p>
+            </div>
+          </div>
+
+          <p class="result-grid-label">Detalle del cálculo</p>
+          <div class="result-grid">
+            <div class="result-stat"><span class="result-stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/></svg></span><div><div class="label">Metabolismo basal (TMB)</div><div class="value" id="out-tmb">—</div></div></div>
+          </div>
+
+          <div class="subresult-card">
+            <div class="subresult-card__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg><h3>Calorías según nivel de actividad</h3></div>
+            <div class="table-wrap" id="tabla-actividad">
+              <table class="activity-table"><tbody></tbody></table>
+            </div>
+          </div>
+        </div>
+
+        <p class="js-warning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          Esta herramienta necesita JavaScript activado en tu navegador para calcular tus calorías.
+        </p>
+
+        <div class="privacy-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/></svg>
+          <span><strong>100% privado.</strong> El cálculo se hace en tu navegador. Es una estimación orientativa, no sustituye el consejo de un dietista-nutricionista.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="ad-slot ad-slot--leaderboard">Publicidad
+      <!-- PEGA AQUÍ TU CÓDIGO DE ADSENSE -->
+    </div>
+  </div>
+
+  <section class="content-block reveal">
+    <div class="wrap-narrow">
+      <h2>Qué es el metabolismo basal y cómo se calcula aquí</h2>
+      <p>Esta calculadora usa la fórmula de <strong>Mifflin-St Jeor</strong>, considerada una de las más precisas para población general por estudios de validación nutricional. Para hombres: TMB = 10×peso + 6,25×altura − 5×edad + 5. Para mujeres: TMB = 10×peso + 6,25×altura − 5×edad − 161. El resultado son las calorías que tu cuerpo quema en reposo absoluto, sin contar ninguna actividad.</p>
+
+      <h2>Del metabolismo basal a las calorías diarias totales</h2>
+      <p>El TMB por sí solo no es lo que necesitas comer — hay que multiplicarlo por un factor de actividad que refleje tu semana real, no la que te gustaría tener. Sobrestimar tu actividad es el error más común al usar este tipo de calculadoras.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg> Un trabajo de oficina sin ejercicio regular es "sedentario", aunque camines algo cada día.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg> "Intensa" y "muy intensa" están pensadas para deportistas o trabajos físicamente exigentes, no para quien va al gimnasio dos veces por semana.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg> Ante la duda, elige el nivel más bajo de los dos que dudes — es más fácil ajustar al alza que corregir un exceso mantenido en el tiempo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="ad-slot ad-slot--incontent">Publicidad
+      <!-- PEGA AQUÍ TU CÓDIGO DE ADSENSE -->
+    </div>
+  </div>
+
+  <section class="content-block reveal">
+    <div class="wrap-narrow">
+      <h2>Preguntas frecuentes sobre calorías diarias</h2>
+      <div class="faq-list" data-faq-calorias></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="wrap-narrow">
+      <h2>Más calculadoras</h2>
+      <div class="tools-grid" data-tools-grid></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg></span> CalculaSalud</div>
+      <div class="footer-links">
+        <a href="privacidad.html">Privacidad</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="mailto:hola@TU-DOMINIO-AQUI.com">Contacto</a>
+      </div>
+    </div>
+    <p class="footer-note">CalculaSalud ofrece herramientas de cálculo orientativas. Los resultados no constituyen diagnóstico ni asesoramiento médico o nutricional. Consulta siempre a un profesional sanitario. © <span data-year></span> CalculaSalud.</p>
+  </div>
+</footer>
+
+<script defer src="lib/manifest.js"></script>
+<script defer src="main.js?v=20260920"></script>
+</body>
+</html>

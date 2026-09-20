@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calculadora de semanas de embarazo y fecha de parto | CalculaSalud</title>
+<meta name="description" content="Calcula en qué semana de embarazo estás y tu fecha probable de parto a partir de tu última regla. Gratis, sin registro.">
+<link rel="canonical" href="https://unaxmujika14-gif.github.io/CalculaSalud/semanas-embarazo.html">
+<!-- TODO DOMINIO: sustituye TU-DOMINIO-AQUI.com por tu dominio real antes de publicar (canonical, og:image, contacto). No se ha inventado un dominio real a propósito. -->
+<meta property="og:title" content="Calculadora de semanas de embarazo y fecha de parto | CalculaSalud">
+<meta property="og:description" content="Tu semana de embarazo y la fecha probable de parto, explicadas con claridad.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/og-embarazo.webp">
+<meta name="theme-color" content="#0f9488">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="google-adsense-account" content="ca-pub-2379537169533504">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2379537169533504" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@500;600;700;800&family=IBM+Plex+Mono:wght@600;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260920">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de semanas de embarazo — CalculaSalud",
+  "description": "Calcula la semana de embarazo actual y la fecha probable de parto a partir de la fecha de última regla, usando la regla de Naegele.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any (navegador web)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Cómo se calcula la fecha probable de parto?", "acceptedAnswer": { "@type": "Answer", "text": "Se usa la regla de Naegele: se suman 280 días (40 semanas) a la fecha del primer día de tu última regla (FUM). Es el método estándar que usan matronas y ginecólogos como primera estimación." } },
+    { "@type": "Question", "name": "¿Por qué el embarazo se cuenta desde la última regla y no desde la concepción?", "acceptedAnswer": { "@type": "Answer", "text": "Porque la fecha exacta de la concepción rara vez se conoce con precisión, mientras que la fecha de la última regla sí. Por convención médica, la semana 1 de embarazo empieza el primer día de esa última regla." } },
+    { "@type": "Question", "name": "¿Qué pasa si tengo ciclos irregulares?", "acceptedAnswer": { "@type": "Answer", "text": "Si tus ciclos no duran 28 días o son irregulares, esta estimación por FUM pierde precisión. La ecografía del primer trimestre suele ser más fiable para datar el embarazo en ese caso." } },
+    { "@type": "Question", "name": "¿Cuántas semanas dura un embarazo a término?", "acceptedAnswer": { "@type": "Answer", "text": "Se considera un embarazo a término entre las semanas 37 y 42, con la semana 40 como fecha de referencia central." } },
+    { "@type": "Question", "name": "¿Esta calculadora sustituye el seguimiento médico?", "acceptedAnswer": { "@type": "Answer", "text": "No. Es una estimación orientativa. El seguimiento real del embarazo debe hacerlo siempre un profesional sanitario." } }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg></span>
+      CalculaSalud
+    </a>
+    <nav class="main-nav" data-nav aria-label="Herramientas"></nav>
+    <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel" aria-label="Abrir menú de herramientas">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="nav-scrim" id="nav-scrim"></div>
+  <nav class="mobile-nav-panel" id="mobile-nav-panel" data-nav aria-label="Herramientas (móvil)"></nav>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">CalculaSalud</a> / Embarazo</p>
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M8 12c-3 1-4 4-3 8h14c1-4 0-7-3-8"/></svg>
+        Herramienta de salud gratuita
+      </span>
+      <h1>Calcula tu semana de embarazo y fecha de parto</h1>
+      <p class="subtitle">Introduce el primer día de tu última regla. Verás en qué semana de embarazo estás y la fecha probable de parto, según la regla de Naegele.</p>
+
+      <div class="trust-badges">
+        <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/></svg> 100% privado</span>
+        <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Resultado al instante</span>
+        <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 12h18"/></svg> Gratis, sin registro</span>
+      </div>
+
+      <nav class="tool-switcher" data-tool-switcher aria-label="Cambiar de calculadora"></nav>
+
+      <form class="tool-card" id="form-embarazo" novalidate>
+        <div class="tool-card__head">
+          <span class="tool-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M8 12c-3 1-4 4-3 8h14c1-4 0-7-3-8"/></svg></span>
+          <div><h2>Semanas de embarazo</h2><p>Introduce una fecha y pulsa calcular</p></div>
+        </div>
+
+        <div class="tool-grid" style="grid-template-columns: 1fr">
+          <div class="field">
+            <label for="fum-embarazo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Primer día de tu última regla</label>
+            <div class="input-affix">
+              <input type="date" id="fum-embarazo" name="fum-embarazo" required>
+            </div>
+            <span class="field-hint">La fecha exacta en que empezó tu último periodo menstrual.</span>
+            <span class="field-error" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="tool-actions">
+          <button type="submit" class="btn btn-primary">
+            <span class="btn-spinner"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M8 12c-3 1-4 4-3 8h14c1-4 0-7-3-8"/></svg>
+            <span class="btn-label">Calcular</span>
+          </button>
+          <button type="button" class="btn btn-ghost" id="reset-embarazo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+            Limpiar
+          </button>
+        </div>
+
+        <p class="error-msg" id="error-embarazo" role="alert">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          <span></span>
+        </p>
+
+        <div class="result-zone" id="resultado-embarazo" aria-live="polite">
+          <div class="result-hero">
+            <span class="result-hero__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M8 12c-3 1-4 4-3 8h14c1-4 0-7-3-8"/></svg></span>
+            <div>
+              <div class="result-hero__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg> Estás de</div>
+              <div class="big"><span id="out-semanas">—</span> <small>semanas y</small> <span id="out-semanas-dias">—</span> <small>días</small></div>
+              <p class="field-hint" id="out-subtitle-embarazo" style="margin-top:.3rem"></p>
+            </div>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-bar__track"><div class="progress-bar__fill" id="embarazo-bar-fill"></div></div>
+            <div class="progress-bar__labels"><span>Semana 0</span><span>Semana 40</span></div>
+          </div>
+
+          <p class="result-grid-label">Detalle</p>
+          <div class="result-grid">
+            <div class="result-stat"><span class="result-stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/></svg></span><div><div class="label">Fecha probable de parto</div><div class="value" id="out-fpp" style="font-size:.95rem">—</div></div></div>
+            <div class="result-stat"><div><div class="label">Trimestre actual</div><div class="value" id="out-trimestre">—</div></div></div>
+            <div class="result-stat"><div><div class="label">Días restantes</div><div class="value" id="out-dias-restantes">—</div></div></div>
+          </div>
+        </div>
+
+        <p class="js-warning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          Esta herramienta necesita JavaScript activado en tu navegador para hacer el cálculo.
+        </p>
+
+        <div class="privacy-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/></svg>
+          <span><strong>100% privado.</strong> El cálculo se hace en tu navegador. Es una estimación orientativa que no sustituye el seguimiento de tu matrona o ginecólogo/a.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="ad-slot ad-slot--leaderboard">Publicidad
+      <!-- PEGA AQUÍ TU CÓDIGO DE ADSENSE -->
+    </div>
+  </div>
+
+  <section class="content-block reveal">
+    <div class="wrap-narrow">
+      <h2>Cómo se calcula la fecha de parto: la regla de Naegele</h2>
+      <p>Esta calculadora usa la <strong>regla de Naegele</strong>, el método estándar en obstetricia: se suman 280 días (40 semanas) al primer día de tu última regla (FUM). El embarazo se cuenta así, desde la FUM, por convención médica — aunque la concepción ocurra en realidad unas dos semanas después, cuando tiene lugar la ovulación.</p>
+      <p>Tu médico o matrona puede ajustar esta fecha con una ecografía del primer trimestre, que mide el tamaño del embrión y suele dar una estimación algo más precisa, especialmente si tus ciclos no son de 28 días exactos.</p>
+
+      <h2>Los tres trimestres del embarazo</h2>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg> Primer trimestre: semanas 1 a 12.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg> Segundo trimestre: semanas 13 a 26.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg> Tercer trimestre: semana 27 hasta el parto.</li>
+      </ul>
+      <p>Un embarazo se considera a término entre las semanas 37 y 42, con la semana 40 como referencia central para la fecha probable de parto.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="ad-slot ad-slot--incontent">Publicidad
+      <!-- PEGA AQUÍ TU CÓDIGO DE ADSENSE -->
+    </div>
+  </div>
+
+  <section class="content-block reveal">
+    <div class="wrap-narrow">
+      <h2>Preguntas frecuentes sobre el embarazo</h2>
+      <div class="faq-list" data-faq-embarazo></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="wrap-narrow">
+      <h2>Más calculadoras</h2>
+      <div class="tools-grid" data-tools-grid></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg></span> CalculaSalud</div>
+      <div class="footer-links">
+        <a href="privacidad.html">Privacidad</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="mailto:hola@TU-DOMINIO-AQUI.com">Contacto</a>
+      </div>
+    </div>
+    <p class="footer-note">CalculaSalud ofrece herramientas de cálculo orientativas. Los resultados no constituyen diagnóstico ni asesoramiento médico. Consulta siempre a un profesional sanitario. © <span data-year></span> CalculaSalud.</p>
+  </div>
+</footer>
+
+<script defer src="lib/manifest.js"></script>
+<script defer src="main.js?v=20260920"></script>
+</body>
+</html>
