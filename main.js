@@ -39,6 +39,14 @@
     return { imc: imc, categoria: categoria, colorKey: colorKey };
   }
 
+  // ---------- % de grasa corporal estimado (fórmula de Deurenberg, 1991) ----------
+  // Verified cases: hombre 25a IMC22 -> 15.9%; mujer 25a IMC22 -> 26.8%
+  // (rangos de referencia sanos para adultos jóvenes; ver comentario en FAQ)
+  function calcularGrasaCorporal(imc, edad, sexo) {
+    var s = sexo === "hombre" ? 1 : 0;
+    return 1.20 * imc + 0.23 * edad - 10.8 * s - 5.4;
+  }
+
   // ---------- TMB / TDEE (Mifflin-St Jeor) ----------
   // Verified case: hombre, 80kg, 180cm, 30a -> TMB 1780; sedentario (x1.2) -> 2136
   var ACTIVITY_FACTORS = [
@@ -252,7 +260,8 @@
 
     var RULES = [
       { id: "peso-imc", min: 20, max: 300, msg: "Introduce un peso entre 20 y 300 kg." },
-      { id: "altura-imc", min: 100, max: 250, msg: "Introduce una altura entre 100 y 250 cm." }
+      { id: "altura-imc", min: 100, max: 250, msg: "Introduce una altura entre 100 y 250 cm." },
+      { id: "edad-imc", min: 15, max: 100, msg: "Introduce una edad entre 15 y 100 años." }
     ];
 
     function ejecutar() {
@@ -265,13 +274,19 @@
       errorMsg.classList.remove("is-visible");
       var peso = parseNum($("#peso-imc").value);
       var altura = parseNum($("#altura-imc").value);
+      var edad = parseNum($("#edad-imc").value);
+      var sexo = $("#sexo-imc").value;
       var r = calcularIMC(peso, altura);
+      var grasa = calcularGrasaCorporal(r.imc, edad, sexo);
 
       $("#out-imc").textContent = fmtNum1.format(r.imc).replace(".", ",");
       $("#out-categoria").textContent = r.categoria;
       $("#out-categoria").className = "value pill-" + r.colorKey;
       var subtitleEl = $("#out-subtitle-imc");
       if (subtitleEl) subtitleEl.textContent = "Con " + peso.toString().replace(".", ",") + " kg y " + altura.toString().replace(".", ",") + " cm, tu categoría es: " + r.categoria.toLowerCase() + ".";
+
+      var outGrasa = $("#out-grasa");
+      if (outGrasa) outGrasa.textContent = fmtNum1.format(Math.max(0, grasa)).replace(".", ",") + " %";
 
       // Barra de rango 15-40 con marcador de posición
       var min = 15, max = 40;

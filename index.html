@@ -37,11 +37,62 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "¿Cómo se calcula el IMC?", "acceptedAnswer": { "@type": "Answer", "text": "El Índice de Masa Corporal se calcula dividiendo tu peso en kilogramos entre tu altura en metros al cuadrado: IMC = peso / altura². Es la fórmula que usan la mayoría de organismos de salud, incluida la OMS." } },
-    { "@type": "Question", "name": "¿Qué significan las categorías del resultado?", "acceptedAnswer": { "@type": "Answer", "text": "Por debajo de 18,5 se considera bajo peso; entre 18,5 y 24,9, peso normal; entre 25 y 29,9, sobrepeso; y 30 o más, obesidad. Son los rangos estándar de la Organización Mundial de la Salud para población adulta." } },
-    { "@type": "Question", "name": "¿El IMC es fiable para todo el mundo?", "acceptedAnswer": { "@type": "Answer", "text": "No del todo. El IMC no distingue entre masa muscular y masa grasa, así que puede sobrestimar el resultado en personas muy musculadas y no es la métrica más adecuada durante el embarazo, en menores de edad ni en personas de edad muy avanzada. Es un indicador orientativo, no un diagnóstico." } },
-    { "@type": "Question", "name": "¿Qué otras medidas complementan al IMC?", "acceptedAnswer": { "@type": "Answer", "text": "El perímetro de cintura, el porcentaje de grasa corporal y la relación cintura-cadera dan una imagen más completa que el IMC por sí solo, especialmente para valorar el riesgo cardiovascular." } },
-    { "@type": "Question", "name": "¿Debería preocuparme si mi IMC está fuera del rango normal?", "acceptedAnswer": { "@type": "Answer", "text": "Un IMC puntual fuera del rango 18,5-24,9 no es por sí mismo un diagnóstico. Coméntalo con un médico o dietista-nutricionista, que valorará tu caso junto con otros factores antes de recomendar cualquier cambio." } }
+    {
+      "@type": "Question",
+      "name": "¿Cómo se calcula el IMC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Índice de Masa Corporal se calcula dividiendo tu peso en kilogramos entre tu altura en metros al cuadrado: IMC = peso / altura². Es la fórmula que usan la mayoría de organismos de salud, incluida la OMS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué significan las categorías del resultado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Por debajo de 18,5 se considera bajo peso; entre 18,5 y 24,9, peso normal; entre 25 y 29,9, sobrepeso; y 30 o más, obesidad. Son los rangos estándar de la Organización Mundial de la Salud para población adulta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El IMC es fiable para todo el mundo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No del todo. El IMC no distingue entre masa muscular y masa grasa, así que puede sobrestimar el resultado en personas muy musculadas y no es la métrica más adecuada durante el embarazo, en menores de edad ni en personas de edad muy avanzada. Es un indicador orientativo, no un diagnóstico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué otras medidas complementan al IMC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El perímetro de cintura, el porcentaje de grasa corporal y la relación cintura-cadera dan una imagen más completa que el IMC por sí solo, especialmente para valorar el riesgo cardiovascular."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Debería preocuparme si mi IMC está fuera del rango normal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un IMC puntual fuera del rango 18,5-24,9 no es por sí mismo un diagnóstico. Coméntalo con un médico o dietista-nutricionista, que valorará tu caso junto con otros factores antes de recomendar cualquier cambio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se calcula el % de grasa corporal estimado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se usa la fórmula de Deurenberg (1991), que combina tu IMC, tu edad y tu sexo: % grasa = 1,20 × IMC + 0,23 × edad − 10,8 × (1 si eres hombre, 0 si eres mujer) − 5,4. Es una fórmula ampliamente citada en estudios de composición corporal, pero sigue siendo una estimación indirecta: no mide tu grasa real como sí hacen la bioimpedancia, los pliegues cutáneos o una prueba DEXA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué se pide edad y sexo si el IMC no los usa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El IMC en sí (peso/altura²) no depende de la edad ni del sexo, pero esos dos datos sí son necesarios para calcular el % de grasa corporal estimado que mostramos junto al IMC, ya que a igual IMC, la proporción de grasa corporal suele variar según la edad y el sexo."
+      }
+    }
   ]
 }
 </script>
@@ -109,6 +160,25 @@
             <span class="field-hint">Tu altura en centímetros (ej.: 170).</span>
             <span class="field-error" role="alert"></span>
           </div>
+          <div class="field">
+            <label for="edad-imc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Edad</label>
+            <div class="input-affix">
+              <input type="text" inputmode="decimal" id="edad-imc" name="edad-imc" value="30" required>
+              <span class="affix">años</span>
+            </div>
+            <span class="field-hint">Se usa para estimar tu % de grasa corporal.</span>
+            <span class="field-error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="sexo-imc">Sexo</label>
+            <div class="input-affix">
+              <select id="sexo-imc" class="affix-select" style="flex:1; padding:.85rem .9rem; font-family:var(--sans); font-weight:700;">
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+              </select>
+            </div>
+            <span class="field-hint">También se usa para el % de grasa corporal.</span>
+          </div>
         </div>
 
         <div class="tool-actions">
@@ -138,9 +208,10 @@
             </div>
           </div>
 
-          <p class="result-grid-label">Categoría</p>
+          <p class="result-grid-label">Categoría y composición estimada</p>
           <div class="result-grid">
             <div class="result-stat"><div><div class="label">Resultado</div><div class="value" id="out-categoria">—</div></div></div>
+            <div class="result-stat"><div><div class="label">Grasa corporal estimada</div><div class="value" id="out-grasa">—</div></div></div>
           </div>
 
           <div class="range-scale">
@@ -149,6 +220,15 @@
             </div>
             <div class="range-scale__labels"><span>15</span><span>18,5</span><span>25</span><span>30</span><span>40</span></div>
           </div>
+
+          <a class="tool-tile" href="calorias-diarias.html" style="margin-top:1.3rem">
+            <span class="tool-tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1-.5-2-1-2 .5 2-1 3-2 2 1-2-1-3-1-5-1 1-2 2-2 4-1-1-1-3 0-6Z"/></svg></span>
+            <span class="tool-tile__body">
+              <h3>¿Cuántas calorías necesitas al día?</h3>
+              <p>Con tu peso, altura, edad y actividad física calculamos tus calorías de mantenimiento.</p>
+              <span class="tool-tile__cta">Ir a la calculadora de calorías <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </span>
+          </a>
 
         </div>
 
@@ -194,6 +274,10 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg> 30 o más — obesidad</li>
       </ul>
       <p>Estos rangos son los oficiales de la OMS para adultos y no aplican igual a niños, adolescentes, embarazadas ni deportistas de alto rendimiento.</p>
+
+      <h2>Por qué también calculamos tu % de grasa corporal estimado</h2>
+      <p>El IMC por sí solo tiene una limitación conocida: no distingue entre masa muscular y masa grasa, así que dos personas con el mismo IMC pueden tener composiciones corporales muy distintas. Por eso, junto al IMC, esta calculadora te da también una <strong>estimación de tu porcentaje de grasa corporal</strong> usando la fórmula de Deurenberg, que combina tu IMC con tu edad y tu sexo — dos variables que, a igual IMC, hacen variar bastante la proporción real de grasa.</p>
+      <p>Es una fórmula validada y muy citada en estudios de composición corporal, pero sigue siendo una <strong>estimación indirecta</strong>: no sustituye a una medición real por bioimpedancia, pliegues cutáneos o una prueba DEXA. Trátala como una segunda referencia junto al IMC, no como un dato clínico exacto.</p>
     </div>
   </section>
 

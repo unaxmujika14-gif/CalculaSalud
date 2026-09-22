@@ -47,8 +47,12 @@
         a: "El perímetro de cintura, el porcentaje de grasa corporal (medido por bioimpedancia o pliegues cutáneos) y la relación cintura-cadera dan una imagen más completa que el IMC por sí solo, especialmente para valorar el riesgo cardiovascular."
       },
       {
-        q: "¿Debería preocuparme si mi IMC está fuera del rango normal?",
-        a: "Un IMC puntual fuera del rango 18,5-24,9 no es por sí mismo un diagnóstico. Coméntalo con un médico o dietista-nutricionista, que valorará tu caso junto con otros factores (composición corporal, antecedentes, hábitos) antes de recomendar cualquier cambio."
+        q: "¿Cómo se calcula el % de grasa corporal estimado?",
+        a: "Se usa la fórmula de Deurenberg (1991), que combina tu IMC, tu edad y tu sexo: % grasa = 1,20 × IMC + 0,23 × edad − 10,8 × (1 si eres hombre, 0 si eres mujer) − 5,4. Es una fórmula ampliamente citada en estudios de composición corporal, pero sigue siendo una estimación indirecta: no mide tu grasa real como sí hacen la bioimpedancia, los pliegues cutáneos o una prueba DEXA."
+      },
+      {
+        q: "¿Por qué se pide edad y sexo si el IMC no los usa?",
+        a: "El IMC en sí (peso/altura²) no depende de la edad ni del sexo, pero esos dos datos sí son necesarios para calcular el % de grasa corporal estimado que mostramos junto al IMC, ya que a igual IMC, la proporción de grasa corporal suele variar según la edad y el sexo."
       }
     ],
     faqsCalorias: [
